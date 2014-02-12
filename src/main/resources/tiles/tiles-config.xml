@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>      
+<!DOCTYPE tiles-definitions PUBLIC  
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"  
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <definition name="defaultTemplate" template="/WEB-INF/views/templates/common_template.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+    </definition>
+    
+    <definition name="start.start" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/welcome.jsp" />
+    </definition>
+    
+    <!-- Player Template -->
+    
+    <definition name="player.index" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/player/index.jsp" />
+    </definition>
+    
+    <definition name="player.show" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/player/show.jsp" />
+    </definition>
+    
+    <definition name="player.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/player/new.jsp" />
+    </definition>
+    
+    <definition name="player.edit" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/player/edit.jsp" />
+    </definition>
+    
+    <definition name="exceptions.exception" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/exceptions/exception.jsp" />
+    </definition>
+	
+	<!-- Player Template -->
+	
+	<definition name="team.index" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/team/index.jsp" />
+    </definition>
+  
+    <definition name="team.show" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/team/show.jsp" />
+    </definition>
+	
+	<definition name="team.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/team/new.jsp" />
+    </definition>
+    
+    <definition name="team.edit" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/team/edit.jsp" />
+    </definition>
+    
+    <!-- Matches Template -->
+	
+	<definition name="matches.index" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/index.jsp" />
+    </definition>
+  
+    <definition name="matches.show" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/show.jsp" />
+    </definition>
+	
+	<definition name="matches.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/new.jsp" />
+    </definition>
+    
+    <definition name="matches.edit" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/edit.jsp" />
+    </definition>
+    
+     <definition name="matches.result.edit" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/result/edit.jsp" />
+    </definition>
+     
+        
+        
+    <definition name="test.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/test/new.jsp" />
+    </definition>    
+        
+        
+    <!-- ADMIN PANEL Template -->
+	 
+	 <definition name="admin.index" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/admin/index.jsp" />
+    </definition>
+  
+    <definition name="admin.show" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/admin/show.jsp" />
+    </definition>
+	
+	<definition name="admin.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/admin/new.jsp" />
+    </definition>
+    
+    <definition name="admin.edit" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/admin/edit.jsp" />
+    </definition>
+
+
+
+
+</tiles-definitions>
