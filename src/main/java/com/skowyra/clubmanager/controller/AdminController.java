@@ -31,9 +31,17 @@ public class AdminController {
 		this.coachService = coachService;
 	}
 	
-	
 	@RequestMapping(value="", method = RequestMethod.GET)
 	public String index(ModelMap map) {
+		logger.info("TESTING********");
+		map.addAttribute("coach", coachService.listCoach());
+		//map.addAttribute("teams", teamService.listTeam());
+		return "admin.start";
+	}
+	
+	
+	@RequestMapping(value="/coach", method = RequestMethod.GET)
+	public String indexCoach(ModelMap map) {
 		logger.info("TESTING********");
 		map.addAttribute("coach", coachService.listCoach());
 		//map.addAttribute("teams", teamService.listTeam());

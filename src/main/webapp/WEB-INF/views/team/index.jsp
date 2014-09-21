@@ -3,13 +3,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <c:url value="/team/new" var="newTeamUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>ZARZĄDZANIE DRUŻYNĄ</h1>
 	<footer>LISTA DRUŻYN</footer>
 </blockquote>
 </div>
-
+<div class="background2">
 <a href="${newTeamUrl}">Utwórz nową drużynę&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 
 <div class="flowline-med">
@@ -24,4 +24,5 @@
 			<p class="lead ">Brak dodanych drużyn!</p>
 		</c:otherwise>
 	</c:choose>
+</div>
 </div>

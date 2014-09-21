@@ -8,11 +8,9 @@
 	
 	<input type="hidden" name="_method" value="DELETE" />
 
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#modal">Usuń</button>
-		</div>
-	</div>
+	
+			<button type="button" class="btn btn-danger btn-large btn-block" data-toggle="modal" data-target="#modal">Usuń</button>
+	
 
 </form:form>
 

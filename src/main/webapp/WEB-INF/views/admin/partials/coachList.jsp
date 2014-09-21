@@ -6,17 +6,19 @@
 		<tr>
 			<th id="name">NAZWISKO I IMIE</th>
 			
-			
+			<th id="rola">ROLA</th>
 			<th id="options">OPCJE</th>			
 		</tr>
 	</thead>
 	<tbody>
+		<tr><td>Kowalski Jan</td><td>Administrator</td><td><a href="${url}">SZCZEGÓŁY&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;</td></tr>
 		<c:forEach items="${coach}" var="coach" >
 		
 		<c:url value="/admin/show=${coach.coachId}" var="url" />
 		<tr>
-			<td>${coach.lastname}&nbsp;${coach.firstname}</td>
 			
+			<td>${coach.lastname}&nbsp;${coach.firstname}</td>
+			<td>Trener</td>
 			<td><a href="${url}">SZCZEGÓŁY&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;</td>
 		</tr>
 		</c:forEach>

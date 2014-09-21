@@ -3,14 +3,14 @@
 <%@ include file="/WEB-INF/includes/taglibs.jsp"%>
 <c:url value="/match" var="indexUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>ZARZĄDZANIE MECZAMI</h1>
 	<footer>DODAJ NOWY MECZ</footer>
 </blockquote>
 </div>
-
-<a href="${indexUrl}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;back</a>
+<div class="background2">
+<a href="${indexUrl}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;cofnij</a>
 
 <div class="flowline-med">
 	<c:if test="${!empty error}">
@@ -21,4 +21,5 @@
 	<c:param name="matches" value="${matches}" />
 	<c:param name="player" value="${player}" />
 	</c:import> 
+</div>
 </div>

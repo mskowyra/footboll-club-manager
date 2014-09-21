@@ -14,7 +14,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">ANULUJ</button>
         <c:url value="/team/delete=${team.teamId}" var="editDeleteUrl" />
-		<a href="${editDeleteUrl}" class="btn btn-primary btn-large">USUŃ</a>
+		<a href="${editDeleteUrl}" class="btn btn-primary btn-large">USUŃ</a>
         
       </div>
     </div><!-- /.modal-content -->

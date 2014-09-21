@@ -3,9 +3,7 @@ package com.skowyra.clubmanager.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -38,8 +36,8 @@ public class Player implements Serializable {
 	private Long id;
 	
 	//Many-to-Many Relationship with Join Table 
-//	@OneToMany(mappedBy = "pk.player",fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-//	private Set<PlayerMatches> playerMatches = new HashSet<PlayerMatches>(0);
+	//@OneToMany(mappedBy = "pk.player",fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	//private Set<PlayerMatches> playerMatches = new HashSet<PlayerMatches>(0);
 	
 	@OneToMany(mappedBy = "pk.player",fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	private List<PlayerMatches> playerMatches = new ArrayList<PlayerMatches>(0);
@@ -54,6 +52,7 @@ public class Player implements Serializable {
 	@NotNull
 	@Size(min=2, max=30, message="NAZWISKO musi mieć od 2 do 30 znaków!")
 	private String lastname;
+	
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="dd-MM-yyyy")

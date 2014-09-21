@@ -8,32 +8,56 @@
 <c:set var="formButtonLabel" value="${empty param.formButtonLabel ? 'Save' : param.formButtonLabel}" />
 
 
-
-<form:form method="${formMethod}" action="${formAction}" commandName="matches" class="form-horizontal" role="form">
-	<div class="form-group">
-		<form:label path="matches" cssClass="col-sm-2 control-label">Drużyna</form:label>
+<form:form method="${formMethod}" action="${formAction}" commandName="playerMatches" class="form-horizontal" role="form">
+ 	<div class="form-group">
+		<form:label path="matches" cssClass="col-sm-2 control-label">Mecz</form:label>
 		<div class="col-sm-10">
 			<form:select path="matches.matchesId" cssClass="form-control"	required="True" >
-				<form:option value="">Wybierz drużynę do której chcesz przypisać zawodnika...</form:option>
+				<form:option value="">Wybierz trenera którego chcesz przypisać do drużyny...</form:option>
 				<c:forEach items="${matches}" var="matches">
 					<form:option value="${matches.matchesId}">${matches.opponent}</form:option>
 				</c:forEach>
 			</form:select>
-			<form:errors path="team.name" cssClass="alert alert-warning" />
 		</div>
 	</div>
-	
 	<div class="form-group">
-		<form:label path="player" cssClass="col-sm-2 control-label">Drużyna</form:label>
+		<form:label path="player" cssClass="col-sm-2 control-label">Zawodnik</form:label>
 		<div class="col-sm-10">
 			<form:select path="player.id" cssClass="form-control"	required="True" >
-				<form:option value="">Wybierz drużynę do której chcesz przypisać zawodnika...</form:option>
+				<form:option value="">Wybierz trenera którego chcesz przypisać do drużyny...</form:option>
 				<c:forEach items="${player}" var="player">
-					<form:option value="${player.id}">${player.firstname}</form:option>
+					<form:option value="${player.id}">${player.firstname} ${player.lastname}</form:option>
 				</c:forEach>
 			</form:select>
-			<form:errors path="team.name" cssClass="alert alert-warning" />
 		</div>
+	</div>
+	<div class="form-group">
+		<form:label path="timePlay" cssClass="col-sm-2 control-label">Czas gry (min)</form:label>
+		<div class="col-sm-10">
+			<form:input path="timePlay" cssClass="form-control" placeholder="min"/>
+			</div>
+			<form:errors path="timePlay" cssClass="alert alert-warning" />
+	</div>
+	<div class="form-group">
+		<form:label path="goals" cssClass="col-sm-2 control-label">Bramki zawodnika</form:label>
+		<div class="col-sm-10">
+			<form:input path="goals" cssClass="form-control" />
+			</div>
+			<form:errors path="goals" cssClass="alert alert-warning" />
+	</div>
+	<div class="form-group">
+		<form:label path="yellowCard" cssClass="col-sm-2 control-label">Żółte kartki</form:label>
+		<div class="col-sm-10">
+			<form:input path="yellowCard" cssClass="form-control" />
+			</div>
+			<form:errors path="yellowCard" cssClass="alert alert-warning" />
+	</div>
+	<div class="form-group">
+		<form:label path="redCard" cssClass="col-sm-2 control-label">Czerwone kartki</form:label>
+		<div class="col-sm-10">
+			<form:input path="redCard" cssClass="form-control" />
+			</div>
+			<form:errors path="redCard" cssClass="alert alert-warning" />
 	</div>
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">

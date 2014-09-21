@@ -1,7 +1,5 @@
 package com.skowyra.clubmanager.controller;
 
-
-
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -23,22 +21,19 @@ import com.skowyra.clubmanager.service.PlayerService;
 
 
 @Controller
-@RequestMapping(value="/result")
-public class TestController {
+@RequestMapping(value="/match/result")
+public class ResultMatchesController {
 	
 	private MatchesService matchesService;
 	private PlayerService playerService;
 	
-	private Logger logger = LoggerFactory.getLogger(TestController.class);
-
-
+	private Logger logger = LoggerFactory.getLogger(ResultMatchesController.class);
 	
 	@Autowired
-	public TestController(MatchesService matchesService,PlayerService playerService) {
+	public ResultMatchesController(MatchesService matchesService,PlayerService playerService) {
 		this.matchesService = matchesService;
 		this.playerService = playerService;
 	}
-	
 		
 	@RequestMapping(value="/new", method = RequestMethod.GET)
 	public String newMatch(@ModelAttribute("playerMatches")PlayerMatches playerMatches,  Model model) {
@@ -52,9 +47,7 @@ public class TestController {
 			@RequestParam("matches.matchesId") Long matchesId,@RequestParam("player.id") Long playerId, 
 			@RequestParam("timePlay") Integer timePlay,@RequestParam("goals") Integer goals,
 			@RequestParam("yellowCard") Integer yellowCard,@RequestParam("redCard") Integer redCard,Model model) {
-		
-		
-		
+			
 		if (result.hasErrors()) {
 			logger.info("Create contact form invalid, rendering new contact template");
 			
@@ -75,6 +68,6 @@ public class TestController {
 		matches.getPlayerMatches().add(playerMatches);
 				
 		matchesService.addOrUpdateMatches(matches);
-		return "redirect:/result/new";
+		return "redirect:/matches/result/new";
 	}
 }

@@ -5,7 +5,7 @@
 
 <c:set var="formMethod" value="${empty param.formMethod ? 'post' : param.formMethod}" />
 <c:set var="formAction" value="${empty param.formAction ? '' : param.formAction}" />
-<c:set var="formButtonLabel" value="${empty param.formButtonLabel ? 'Save' : param.formButtonLabel}" />
+<c:set var="formButtonLabel" value="${empty param.formButtonLabel ? 'Zapisz' : param.formButtonLabel}" />
 
 
 

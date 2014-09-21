@@ -3,13 +3,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <c:url value="/match/new" var="newMatchesUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>ZARZĄDZANIE MECZAMI</h1>
 	<footer>LISTA MECZY</footer>
 </blockquote>
 </div>
-
+<div class="background2">
 <a href="${newMatchesUrl}">Utwórz nowe spotkanie&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 
 <div class="flowline-med">
@@ -23,4 +23,5 @@
 			<p class="lead ">Brak meczy!</p>
 		</c:otherwise>
 	</c:choose>
+</div>
 </div>

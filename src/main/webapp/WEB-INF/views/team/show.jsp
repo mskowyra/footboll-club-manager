@@ -3,30 +3,44 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <c:url value="/team" var="indexUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>ZARZĄDZANIE DRUŻYNĄ</h1>
 	<footer>DRUŻYNA ${team.name}</footer>
 </blockquote>
 </div>
 
+<div class="background2">
 <a href="${indexUrl}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;back</a>
-
+<div class="form-group" >
+<div class="col-sm-4"></div>
+<div class="col-sm-9 col-md-offset-3">
 <div class="flowline-med">
+	
 	<dl class="dl-horizontal">
 		<dt>Nazwa drużyny</dt><dd><c:out value="${team.name}" /></dd>
 		<dt>Trener</dt><dd><c:out value="${team.coach.firstname} ${team.coach.lastname}" /></dd>
-		
 	</dl>
 </div>
+</div>
+</div>
 
-<c:url value="/team/edit=${team.teamId}" var="editTeamUrl" />
-<a href="${editTeamUrl}" class="btn btn-primary btn-large">edycja</a>
+	
+	
+  <div class="btn-group btn-group-justified">
+  <div class="col-sm-offset-3 col-sm-2">
+		<c:url value="/team/edit=${team.teamId}" var="editTeamUrl" />
+		<a href="${editTeamUrl}" type="button" class="btn btn-primary btn-large btn-block">Edycja</a>
+</div>
 
-<c:import url="/WEB-INF/views/team/partials/teamDeleteForm.jsp">
-	<c:param name="team" value="${team}" />
-</c:import>
-
+<div class="col-sm-2">	
+	<c:import url="/WEB-INF/views/team/partials/teamDeleteForm.jsp">
+		<c:param name="team" value="${team} "  />
+	</c:import>
+</div>
+	</div>
+</div>	
+	
 <script>
 	$('.confirm').click(function () {
 		$('form').submit();

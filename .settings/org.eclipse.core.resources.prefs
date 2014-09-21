@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/new.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/matches/edit.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/matches/new.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/matches/result/new.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/player/partials/playerDeleteForm.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/player/partials/playerForm.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/player/partials/playerList.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/player/show.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/team/partials/partials/modal.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/team/partials/teamDeleteForm.jsp=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

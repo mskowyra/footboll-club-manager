@@ -3,13 +3,13 @@
 <%@ include file="/WEB-INF/includes/taglibs.jsp"%>
 <c:url value="/team" var="indexUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>ZARZĄDZANIE DRUŻYNĄ</h1>
 	<footer>EDYCJA DRUŻYNY ${team.name}</footer>
 </blockquote>
 </div>
-
+<div class="background2">
 <a href="${indexUrl}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;back</a>
 
 <div class="flowline-med">
@@ -68,4 +68,5 @@
 		<c:param name="formButtonLabel" value="Update" />
 	
 	</c:import>
+</div>
 </div>

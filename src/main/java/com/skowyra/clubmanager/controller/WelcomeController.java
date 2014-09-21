@@ -25,7 +25,7 @@ public class WelcomeController {
     public String showWelcomePage(Model model) {
         logger.debug("Page Request: /welcome.do");
         
-        return "start.start";
+        return "login.index";
     }
     
 

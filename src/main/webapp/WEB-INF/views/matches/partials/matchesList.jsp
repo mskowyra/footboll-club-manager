@@ -12,14 +12,16 @@
 	</thead>
 	<tbody>
 		<c:forEach items="${matches}" var="matches" >
-		<c:url value="/match/result/edit=${matches.matchesId}" var="resultEdit" />
+		<c:url value="/match/edit=${matches.matchesId}" var="edit" />
 		<c:url value="/match/show=${matches.matchesId}" var="url" />
+		<c:url value="/match/result/new" var="resultNew" />
 		<tr>
 			<td>${matches.dateMatches}</td>
 			<td>${matches.opponent}</td>
 			<td>${matches.typeMatches}</td>
-			<td><a href="${resultEdit}">SZCZEGÓŁY&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;<a href="${url}">SZCZEGÓŁY&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;</td>
+			<td><a href="${edit}">EDYCJA&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;<a href="${url}">SZCZEGÓŁY&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>&nbsp;<a href="${resultNew}">STAT&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></td>
 		</tr>
 		</c:forEach>
 	</tbody>
 </table>
+

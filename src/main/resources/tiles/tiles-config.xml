@@ -4,14 +4,26 @@
     "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
+	<definition name="loginTemplate" template="/WEB-INF/views/templates/login_template.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/welcome.jsp" />
+    </definition>
+
     <definition name="defaultTemplate" template="/WEB-INF/views/templates/common_template.jsp">
         <put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
     </definition>
     
     <definition name="start.start" extends="defaultTemplate">
     	<put-attribute name="body" value="/WEB-INF/views/welcome.jsp" />
     </definition>
     
+    <!-- Login Template -->
+    
+    <definition name="login.index" extends="loginTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/welcome.jsp" />
+    </definition>
+   
+   
     <!-- Player Template -->
     
     <definition name="player.index" extends="defaultTemplate">
@@ -74,7 +86,13 @@
     	<put-attribute name="body" value="/WEB-INF/views/matches/result/edit.jsp" />
     </definition>
      
-        
+    <!-- Result Matches Template -->    
+     
+    <definition name="result.new" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/matches/result/new.jsp" />
+    </definition> 
+     
+     
         
     <definition name="test.new" extends="defaultTemplate">
     	<put-attribute name="body" value="/WEB-INF/views/test/new.jsp" />
@@ -82,8 +100,12 @@
         
         
     <!-- ADMIN PANEL Template -->
+	
+	<definition name="admin.start" extends="defaultTemplate">
+    	<put-attribute name="body" value="/WEB-INF/views/admin/start.jsp" />
+    </definition>
 	 
-	 <definition name="admin.index" extends="defaultTemplate">
+	<definition name="admin.index" extends="defaultTemplate">
     	<put-attribute name="body" value="/WEB-INF/views/admin/index.jsp" />
     </definition>
   

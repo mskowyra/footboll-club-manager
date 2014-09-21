@@ -3,14 +3,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <c:url value="/admin/new" var="newCoachUrl" />
 
-<div class="page-header">
+<div class="page-header background">
 	<blockquote>
 	<h1>PANEL ADMINISTARCYJNY</h1>
-	<footer>ZARZĄDZANIE KLUBEM </footer>
+	<footer>ZARZĄDZANIE UŻYTKOWNIKAMI</footer>
 </blockquote>
 </div>
-
-<a href="${newCoachUrl}">Dodaj trenera&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+<div class="background2">
+<a href="${newCoachUrl}">Dodaj użytkownika&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
 
 <div class="flowline-med">
 	<c:choose>
@@ -24,4 +24,5 @@
 			<p class="lead ">Brak trenerów!</p>
 		</c:otherwise>
 	</c:choose>
+</div>
 </div>

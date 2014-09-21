@@ -4,21 +4,19 @@
 
 <c:url var="deleteTeamUrl" value="/team/delete=${team.teamId}" />
 
-<form:form method="delete" action="${deletePlayerUrl}" commandName="contact" class="form-horizontal" role="form">
+<form:form method="delete" action="${deletePlayerUrl}" commandName="contact" role="form">
 	
 	<input type="hidden" name="_method" value="DELETE" />
 
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#modal">Usuń</button>
-		</div>
-	</div>
+	
+			<button type="button" class="btn btn-danger btn-large btn-block" data-toggle="modal" data-target="#modal">Usuń</button>
+	
 
 </form:form>
 
 <c:import url="/WEB-INF/views/team/partials/partials/modal.jsp">
-	<c:param name="modalTitle" value="Usunąć Drużynę?" />
-	<c:param name="modalBody" value="UCzy jesteś pewien żeby usunąć drużynę? ${team.name} z listy?" />
+	<c:param name="modalTitle" value="UsunÄÄ DruÅ¼ynÄ?" />
+	<c:param name="modalBody" value="UCzy jesteÅÂ pewien Å¼eby usunÄÄ druÅ¼ynÄ?Â ${team.name} z listy?" />
 	<c:param name="deletePlayerUrl" value="/team/delete=${team.teamId}" />
 	
 </c:import>
