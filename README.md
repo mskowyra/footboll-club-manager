@@ -3,6 +3,15 @@ footboll-club-manager
 
 PRACA MAGISTERSKA - PROJEKT I IMPLEMENTACJA SYSTEMU CMS DO ZARZĄDZANIA KLUBEM PIŁKARSKIM
 
+-Java
+-Spring Framework
+-Hibernate
+-Maven
+-TwitterBootstrap
+-JSP
+-Apache Tiles
+-MySQL Database
+
 
 ![My image](https://github.com/mskowyra/footboll-club-manager/blob/master/src/main/images/Schowek01.jpg)
 ![My image](https://github.com/mskowyra/footboll-club-manager/blob/master/src/main/images/Schowek02.jpg)
